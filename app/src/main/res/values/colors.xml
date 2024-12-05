@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="back_gr">#EFEEF4</color>
+    <color name="grey_dak">#72434343</color>
+    <color name="green_m">#2FC693</color>
+    <color name="pink">#D81B60</color>
+    <color name="colorPrimary">#40FFFFFF</color> <!-- Màu chính -->
+    <color name="colorAccent">#1B4AD7</color>
+    <color name="grey">#216E77</color>
+    <color name="orange">#B4EEA74D</color>
+    <color name="orange2">#FB8C00</color> <!-- Màu nhấn -->
+</resources>
