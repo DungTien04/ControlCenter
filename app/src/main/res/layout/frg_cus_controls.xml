@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,7 +17,8 @@
             android:id="@+id/iv_back"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="match_parent"
@@ -35,42 +37,48 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/control_add"
-        android:textColor="@color/grey_dak"
+        android:textColor="#72434343"
         android:textSize="15sp" />
-
-    <LinearLayout
-        android:id="@+id/ln_content"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ln_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:text="@string/include"
-            android:textColor="@color/grey_dak"
-            android:layout_marginStart="10dp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_control_pre"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_cus_controls" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/more_control"
-            android:textColor="@color/grey_dak"
-            android:layout_marginStart="10dp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_control_non_pre"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_cus_controls" />
-    </LinearLayout>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:text="@string/include"
+                android:textColor="@color/grey_dak"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_control_pre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_cus_controls" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/more_control"
+                android:textColor="@color/grey_dak"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_control_non_pre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_cus_controls" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

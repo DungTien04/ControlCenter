@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -19,12 +20,15 @@
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_disturb" />
+            android:src="@drawable/ic_disturb"
+            tools:ignore="ContentDescription" />
+
         <ImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@drawable/grid_bgr"
-            android:src="@drawable/ic_setting" />
+            android:src="@drawable/ic_setting"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
             android:id="@+id/tv_story_name"
@@ -33,13 +37,13 @@
             android:layout_marginStart="10dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/setting"
-            android:textColor="@color/grey_dak"
-            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="20sp" />
         <ImageView
             android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_dehaze_24" />
+            android:src="@drawable/ic_dehaze_24"
+            tools:ignore="ContentDescription" />
     </TableRow>
 
 </LinearLayout>
