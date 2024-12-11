@@ -1,245 +1,258 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!-- Các phần tử khác của giao diện người dùng -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/transparent">
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-        <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_blur" />
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#37000000" />
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-
-
-        <TableRow
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="20dp">
-
-            <GridLayout
-                android:id="@+id/grid_layout"
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/grid_bgr"
-                android:columnCount="2"
-                android:padding="10dp"
-                android:rowCount="2"
-                tools:ignore="MissingConstraints">
-
-                <!-- Các nút điều khiển -->
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_airplane"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button_background"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_rotate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button_background"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_wifi"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button_background"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_bluetooth"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/button_background"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-            </GridLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:background="@drawable/grid_bgr"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_setting" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
-                    android:text="@string/choose_music_player"
-                    android:textColor="@color/colorPrimary"
-                    tools:ignore="TextContrastCheck" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_rewind"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_play"
-                        tools:ignore="ContentDescription" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_forward"
-                        tools:ignore="ContentDescription" />
-
-                </TableRow>
-            </LinearLayout>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingHorizontal="20dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <View
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:background="@drawable/bg_blur" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#37000000" />
+        </FrameLayout>
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/grid_bgr" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/grid_bgr" />
-                </TableRow>
-
-                <View
-                    android:layout_width="175dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/grid_bgr" />
-            </LinearLayout>
-
-            <TableRow
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:layout_weight="1">
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="160dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/grid_bgr" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="160dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/grid_bgr" />
-
-
-            </TableRow>
-
-        </TableRow>
-
-        <GridLayout
-            android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cs_layout_1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:columnCount="4"
-            android:padding="20dp"
-            android:rowCount="2"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintWidth_percent="0.35"
             tools:ignore="MissingConstraints">
 
-            <View
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+            <ImageView
+                android:id="@+id/btn_airplane"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/grid_bgr" />
+                android:background="@drawable/button_background"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/btn_airplane2"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.4"
+                tools:ignore="ContentDescription" />
 
-            <View
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+            <ImageView
+                android:id="@+id/btn_airplane2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/grid_bgr" />
+                android:background="@drawable/button_background"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_airplane"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.4"
+                tools:ignore="ContentDescription" />
 
-            <View
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+            <ImageView
+                android:id="@+id/btn_airplane3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/grid_bgr" />
+                android:background="@drawable/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/btn_airplane4"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_airplane"
+                app:layout_constraintWidth_percent="0.4"
+                tools:ignore="ContentDescription" />
 
-            <View
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+            <ImageView
+                android:id="@+id/btn_airplane4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/grid_bgr" />
+                android:background="@drawable/button_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_airplane3"
+                app:layout_constraintTop_toBottomOf="@id/btn_airplane2"
+                app:layout_constraintWidth_percent="0.4"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cs_layout_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintWidth_percent="0.35">
+
+            <ImageView
+                android:id="@+id/iv_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_musicPlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:text="@string/choose_music_player"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_music"
+                tools:ignore="TextContrastCheck" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_musicPlay">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_rewind"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_play"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_forward"
+                    tools:ignore="ContentDescription" />
+
+            </TableRow>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/iv_3"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/cs_layout_1"
+            app:layout_constraintTop_toBottomOf="@id/cs_layout_1"
+            app:layout_constraintWidth_percent="0.15"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/cs_layout_1"
+            app:layout_constraintStart_toEndOf="@id/iv_2"
+            app:layout_constraintTop_toBottomOf="@id/cs_layout_1"
+            app:layout_constraintWidth_percent="0.15"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+
+            android:id="@+id/iv_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintStart_toStartOf="@id/iv_2"
+            app:layout_constraintTop_toBottomOf="@id/iv_2"
+            app:layout_constraintWidth_percent="0.35"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+
+            android:id="@+id/iv_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintDimensionRatio="1:2.5"
+            app:layout_constraintEnd_toStartOf="@id/iv_6"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/cs_layout_2"
+            app:layout_constraintTop_toBottomOf="@id/cs_layout_2"
+            app:layout_constraintWidth_percent="0.15"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+
+            android:id="@+id/iv_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grid_bgr"
+            app:layout_constraintDimensionRatio="1:2.5"
+            app:layout_constraintEnd_toEndOf="@id/cs_layout_2"
+            app:layout_constraintStart_toEndOf="@id/iv_5"
+            app:layout_constraintTop_toBottomOf="@id/cs_layout_2"
+            app:layout_constraintWidth_percent="0.15"
+            tools:ignore="ContentDescription" />
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:columnCount="4"
+            android:rowCount="2"
+            app:layout_constraintEnd_toEndOf="@id/iv_6"
+            app:layout_constraintStart_toStartOf="@id/cs_layout_1"
+            app:layout_constraintTop_toBottomOf="@id/iv_4"
+            tools:ignore="UselessLeaf">
+
 
         </GridLayout>
 
-    </LinearLayout>
-</RelativeLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 

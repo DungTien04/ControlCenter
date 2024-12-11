@@ -10,5 +10,6 @@
     <color name="colorAccent">#1B4AD7</color>
     <color name="grey">#216E77</color>
     <color name="orange">#B4EEA74D</color>
-    <color name="orange2">#FB8C00</color> <!-- Màu nhấn -->
+    <color name="orange2">#FB8C00</color>
+    <color name="blur">#128F8F8F</color> <!-- Màu nhấn -->
 </resources>
