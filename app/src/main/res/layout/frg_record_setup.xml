@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/ln_record_setup"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="56dp"
         android:background="@color/green_m"
         android:orientation="horizontal">
@@ -48,30 +53,43 @@
     </LinearLayout>
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@id/ln_record_setup"
+        android:id="@+id/tv_video_config"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginVertical="20dp"
         android:text="@string/videocof"
         android:textColor="@color/pink"
-        android:textSize="15sp" />
+        android:textSize="18sp" />
 
     <TableRow
+        app:layout_constraintTop_toBottomOf="@id/tv_video_config"
+        android:id="@+id/tr_record_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.09"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="0dp"
+            android:maxWidth="45dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:src="@mipmap/ic_play_button"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:orientation="vertical">
 
@@ -80,34 +98,43 @@
                 android:layout_height="wrap_content"
                 android:text="@string/choose_music_player"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/zing"
                 android:textColor="@color/grey_dak"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.09"
+        android:id="@+id/tr_record_2"
+        app:layout_constraintTop_toBottomOf="@id/tr_record_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="0dp"
+            android:maxWidth="45dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:src="@mipmap/ic_play_button"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:orientation="vertical">
 
@@ -116,243 +143,308 @@
                 android:layout_height="wrap_content"
                 android:text="@string/resolution"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="480x360"
+                android:text="@string/size_480x360"
                 android:textColor="@color/grey_dak"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
     </TableRow>
 
     <LinearLayout
+        android:id="@+id/ln_advance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tr_record_2"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
+        app:layout_constraintVertical_bias="0"
         android:orientation="vertical"
         android:visibility="visible"
-        android:layout_height="wrap_content">
-        <TableRow
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
+            android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                android:id="@+id/tr_record_3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp">
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/ic_play_button"
-                tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="@string/bitrate"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bitrate"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num_5000"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/tr_record_4"
+                app:layout_constraintTop_toBottomOf="@id/tr_record_3"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="5000"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
 
-        </TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/framerate"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num_15"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/ic_play_button"
-                tools:ignore="ContentDescription" />
+            </TableRow>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr_record_4"
+                android:id="@+id/tr_record_5"
+                android:layout_marginTop="10dp">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="@string/framerate"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/i_frame"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/num_1"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr_record_5"
+                android:id="@+id/tr_record_6"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="15"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
 
-        </TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avcprofile"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defa"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/ic_play_button"
-                tools:ignore="ContentDescription" />
+            </TableRow>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr_record_6"
+                android:id="@+id/tr_record_7"
+                android:layout_marginTop="10dp">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="@string/i_frame"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/orientation"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/portrait"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/tr_record_8"
+                app:layout_constraintHeight_percent="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tr_record_7">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:maxWidth="45dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ic_play_button"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="1"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-        </TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/record_w_audio"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/record_s_w_audio"
+                        android:textColor="@color/grey_dak"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/ic_play_button"
-                tools:ignore="ContentDescription" />
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </TableRow>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/avcprofile"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Default"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/ic_play_button"
-                tools:ignore="ContentDescription" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/orientation"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Portrait"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:src="@mipmap/music"
-                tools:ignore="ContentDescription" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/record_w_audio"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="270dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/record_s_w_audio"
-                    android:textColor="@color/grey_dak"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <Switch
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_vertical"
-                tools:ignore="UseSwitchCompatOrMaterialXml" />
-        </TableRow>
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

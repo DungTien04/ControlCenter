@@ -45,4 +45,10 @@
     <string name="orientation">Orientation</string>
     <string name="record_w_audio">Record with audio</string>
     <string name="record_s_w_audio">Record screen with audio use micro or your phone.You must grant Record Audio permission to use this funcition</string>
+    <string name="portrait">Portrait</string>
+    <string name="defa">Default</string>
+    <string name="num_1">1</string>
+    <string name="num_15">15</string>
+    <string name="num_5000">5000</string>
+    <string name="size_480x360">480x360</string>
 </resources>
