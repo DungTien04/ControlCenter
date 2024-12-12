@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/blur"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:maxWidth="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -35,12 +39,11 @@
             android:background="@drawable/grid_bgr"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintEnd_toStartOf="@id/cs_layout_2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3"
-            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.20"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -109,11 +112,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cs_layout_1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3"
-            app:layout_constraintWidth_percent="0.35">
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.2">
 
             <ImageView
                 android:id="@+id/iv_music"
@@ -181,7 +183,7 @@
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@id/cs_layout_1"
             app:layout_constraintTop_toBottomOf="@id/cs_layout_1"
-            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintHeight_percent="0.09"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -194,7 +196,7 @@
             app:layout_constraintEnd_toEndOf="@id/cs_layout_1"
             app:layout_constraintStart_toEndOf="@id/iv_2"
             app:layout_constraintTop_toBottomOf="@id/cs_layout_1"
-            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintHeight_percent="0.09"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -207,7 +209,7 @@
             app:layout_constraintDimensionRatio="2:1"
             app:layout_constraintStart_toStartOf="@id/iv_2"
             app:layout_constraintTop_toBottomOf="@id/iv_2"
-            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintHeight_percent="0.1"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -216,13 +218,14 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_4"
             android:background="@drawable/grid_bgr"
             app:layout_constraintDimensionRatio="1:2.5"
             app:layout_constraintEnd_toStartOf="@id/iv_6"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@id/cs_layout_2"
             app:layout_constraintTop_toBottomOf="@id/cs_layout_2"
-            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintHeight_percent="0.2"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -233,10 +236,11 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/grid_bgr"
             app:layout_constraintDimensionRatio="1:2.5"
+            app:layout_constraintBottom_toBottomOf="@id/iv_4"
             app:layout_constraintEnd_toEndOf="@id/cs_layout_2"
             app:layout_constraintStart_toEndOf="@id/iv_5"
             app:layout_constraintTop_toBottomOf="@id/cs_layout_2"
-            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintHeight_percent="0.2"
             tools:ignore="ContentDescription" />
 
         <GridLayout
@@ -254,5 +258,5 @@
         </GridLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
