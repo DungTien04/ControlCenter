@@ -54,7 +54,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/button_background"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@id/btn_airplane2"
+                app:layout_constraintEnd_toStartOf="@id/btn_rotate"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -62,7 +62,7 @@
                 tools:ignore="ContentDescription" />
 
             <ImageView
-                android:id="@+id/btn_airplane2"
+                android:id="@+id/btn_rotate"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="10dp"
@@ -75,14 +75,14 @@
                 tools:ignore="ContentDescription" />
 
             <ImageView
-                android:id="@+id/btn_airplane3"
+                android:id="@+id/btn_wifi"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/button_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@id/btn_airplane4"
+                app:layout_constraintEnd_toStartOf="@id/btn_blueto"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_airplane"
@@ -90,7 +90,7 @@
                 tools:ignore="ContentDescription" />
 
             <ImageView
-                android:id="@+id/btn_airplane4"
+                android:id="@+id/btn_blueto"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="10dp"
@@ -98,8 +98,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btn_airplane3"
-                app:layout_constraintTop_toBottomOf="@id/btn_airplane2"
+                app:layout_constraintStart_toEndOf="@id/btn_wifi"
+                app:layout_constraintTop_toBottomOf="@id/btn_rotate"
                 app:layout_constraintWidth_percent="0.4"
                 tools:ignore="ContentDescription" />
 

@@ -12,4 +12,5 @@
     <color name="orange">#B4EEA74D</color>
     <color name="orange2">#FB8C00</color>
     <color name="blur">#128F8F8F</color> <!-- Màu nhấn -->
+    <color name="blurewr">#748F8F8F</color> <!-- Màu nhấn -->
 </resources>

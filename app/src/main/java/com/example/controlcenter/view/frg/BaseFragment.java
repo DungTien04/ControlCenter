@@ -1,4 +1,4 @@
-package com.example.controlcenter.frg;
+package com.example.controlcenter.view.frg;
 
 import android.content.Context;
 import android.os.Bundle;

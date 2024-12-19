@@ -17,13 +17,23 @@
         android:gravity="center_vertical"
         android:layout_height="45dp">
         <ImageView
+            android:id="@+id/iv_delete"
             android:layout_width="30dp"
             android:layout_height="match_parent"
+            android:visibility="gone"
             android:layout_marginEnd="10dp"
             android:src="@drawable/ic_disturb"
             tools:ignore="ContentDescription" />
-
         <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:visibility="visible"
+            android:src="@mipmap/ic_add"
+            tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/iv_icon"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@drawable/grid_bgr"
@@ -31,7 +41,7 @@
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/tv_story_name"
+            android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

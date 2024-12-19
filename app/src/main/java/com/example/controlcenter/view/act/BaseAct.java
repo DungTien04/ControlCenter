@@ -1,4 +1,4 @@
-package com.example.controlcenter.act;
+package com.example.controlcenter.view.act;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +14,7 @@ import androidx.viewbinding.ViewBinding;
 
 import com.example.controlcenter.OnMainCallBack;
 import com.example.controlcenter.R;
-import com.example.controlcenter.frg.BaseFragment;
+import com.example.controlcenter.view.frg.BaseFragment;
 
 
 import java.lang.reflect.Constructor;

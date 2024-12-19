@@ -1,4 +1,4 @@
-package com.example.controlcenter.frg;
+package com.example.controlcenter.view.frg;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,7 +9,7 @@ import com.example.controlcenter.databinding.FrgCusControlsBinding;
 import com.example.controlcenter.viewMd.M002MD;
 
 public class FragmentCusControl  extends BaseFragment<FrgCusControlsBinding,M002MD>  {
-    private static final String TAG = "FragmentCusControl";
+    private static final String TAG = FragmentCusControl.class.getName();
     @Override
     protected Class<M002MD> getClassVM() {
         return M002MD.class;
@@ -22,6 +22,10 @@ public class FragmentCusControl  extends BaseFragment<FrgCusControlsBinding,M002
 
     @Override
     protected void initViews() {
+        binding.ivBack.setOnClickListener(v ->  back());
+    }
 
+    private void back() {
+        getActivity().getSupportFragmentManager().popBackStack();
     }
 }
