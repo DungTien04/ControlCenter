@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
 
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -47,4 +49,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("androidx.cardview:cardview:1.0.0")
     implementation ("com.google.android.material:material:1.2.1")
+    implementation ("com.google.code.gson:gson:2.11.0")
 }

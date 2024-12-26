@@ -81,19 +81,15 @@ public class bottomSheetDlFragment extends BottomSheetDialogFragment {
         appsList = App.getInstance().getStorage().listApps;
         for (Apps apps : appsList){
             if(apps.getAppName().contains("Wifi")){
-                wifi.setImageDrawable(apps.getAppIcon());
                 wifi.setTag(apps.getPackageName());
             }
             if(apps.getAppName().contains("Bluetooth")){
-                bluetooth.setImageDrawable(apps.getAppIcon());
                 bluetooth.setTag(apps.getPackageName());
             }
             if(apps.getAppName().contains("Airplane")){
-                plane.setImageDrawable(apps.getAppIcon());
                 plane.setTag(apps.getPackageName());
             }
             if(apps.getAppName().contains("rotate")){
-                rotate.setImageDrawable(apps.getAppIcon());
                 rotate.setTag(apps.getPackageName());
             }
 

@@ -1,6 +1,13 @@
 package com.example.controlcenter.view.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +48,17 @@ public class App2Adapter extends RecyclerView.Adapter<App2Adapter.AppViewHolder>
             return;
         }
         holder.tvName.setText(apps.getAppName());
-        holder.ivIcon.setImageDrawable(apps.getAppIcon());
+        Bitmap bitmap = decodeFromBase64(apps.getAppIconCode());
+        Drawable drawable  = bitmapToDrawable(bitmap,contex);
+        holder.ivIcon.setImageDrawable(drawable);
         holder.bind(apps, listener, position);
+    }
+    public Bitmap decodeFromBase64(String input) {
+        byte[] decodedBytes = Base64.decode(input, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+    }
+    public Drawable bitmapToDrawable(Bitmap bitmap, Context context) {
+        return new BitmapDrawable(context.getResources(), bitmap);
     }
 
     @Override

@@ -18,10 +18,11 @@ import java.util.List;
 
 public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding, M001MD>{
     public static final String TAG =CustomizeControlFragment.class.getName() ;
-    List<Apps> listApp = App.getInstance().getStorage().listApps;
-    List<Apps> listUse = new ArrayList<>();
+    private  List<Apps> listApp=new ArrayList<>();
+    private  List<Apps> listUse=new ArrayList<>();
     private AppAdapter adapter1;
     private App2Adapter adapter2;
+
      @Override
     protected Class<M001MD> getClassVM() {
         return M001MD.class;
@@ -35,40 +36,52 @@ public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding
     @Override
     protected void initViews() {
         binding.ivBack.setOnClickListener(v ->  back());
-
+        loadData();
         showListApps();
-
     }
 
+    private void loadData() {
+        listApp=App.getInstance().getControlDB().getDao().getNonUseApp();
+        listUse=App.getInstance().getControlDB().getDao().getUseApp();
+    }
     private void showListApps() {
-        listUse.add(new Apps("Klairs",binding.getRoot().getDividerDrawable()));
 
-          adapter1 = new AppAdapter(context, listApp, new AppAdapter.OnItemActionListener() {
-            @Override
-            public void onAddClick(int position) {
-                Apps apps = listApp.get(position);
-                adapter2.addItem(apps);
-                adapter1.removeItem(position);
-            }
-        });
-         adapter2 = new App2Adapter(context, listUse, new App2Adapter.OnItemActionListener() {
-             @Override
-             public void onRemoveClick(int position) {
-                 Apps apps = listUse.get(position);
-                 adapter1.addItem(apps);
-                 adapter2.removeItem(position);
-
-             }
+          adapter1 = new AppAdapter(context, listApp, position -> {
+              Apps apps = listApp.get(position);
+              apps.setUse(true);
+              new Thread(() -> {
+                  try {
+                      App.getInstance().getControlDB().getDao().updateApps(apps);
+                      getActivity().runOnUiThread(() -> {
+                          adapter2.addItem(apps);
+                          adapter1.removeItem(position);
+                      });
+                  } catch (Exception e) {
+                      e.printStackTrace();
+                  }
+              }).start();
+          });
+         adapter2 = new App2Adapter(context, listUse, position -> {
+             Apps apps = listUse.get(position);
+             apps.setUse(false);
+             new Thread(() -> {
+                 try {
+                     App.getInstance().getControlDB().getDao().updateApps(apps);
+                     getActivity().runOnUiThread(() -> {
+                         adapter1.addItem(apps);
+                         adapter2.removeItem(position);
+                     });
+                 } catch (Exception e) {
+                     e.printStackTrace();
+                 }
+             }).start();
          }) ;
-
-        App.getInstance().getStorage().listUse = listUse;
 
         binding.rcvControlPre.setLayoutManager(new LinearLayoutManager(context));
         binding.rcvControlPre.setAdapter(adapter2);
 
         binding.rcvControlNonPre.setLayoutManager(new LinearLayoutManager(context));
         binding.rcvControlNonPre.setAdapter(adapter1);
-
 
     }
 
