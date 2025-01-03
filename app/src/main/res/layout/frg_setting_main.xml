@@ -93,7 +93,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     tools:ignore="ScrollViewSize">
@@ -283,7 +282,6 @@
                         app:layout_constraintHeight_percent="0.11"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
 
                         <ImageView
@@ -305,6 +303,7 @@
 
 
                     <TableRow
+                        android:id="@+id/tr_language"
                         android:layout_width="match_parent"
                         app:layout_constraintTop_toBottomOf="@id/tr_customize"
                         android:layout_height="0dp"
@@ -331,7 +330,6 @@
                             android:textSize="18sp"
                             android:textColor="@color/black" />
                     </TableRow>
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
 

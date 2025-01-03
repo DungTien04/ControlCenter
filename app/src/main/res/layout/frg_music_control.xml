@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ln_music"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/green_m"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_back"
@@ -36,44 +37,44 @@
     </LinearLayout>
 
     <TextView
-        app:layout_constraintTop_toBottomOf="@id/ln_music"
         android:id="@+id/tv_music_control"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginVertical="20dp"
         android:text="@string/music"
         android:textColor="@color/pink"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ln_music" />
 
     <TableRow
-        app:layout_constraintTop_toBottomOf="@id/tv_music_control"
         android:id="@+id/tr_music_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.09"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp">
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_music_control">
 
         <ImageView
             android:layout_width="0dp"
-            android:maxWidth="45dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:maxWidth="45dp"
             android:src="@mipmap/ic_play_button"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
-            android:layout_weight="7"
             android:layout_width="0dp"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="20dp"
+            android:layout_weight="7"
             android:orientation="vertical">
 
             <TextView
@@ -94,30 +95,31 @@
     </TableRow>
 
     <TableRow
-        app:layout_constraintTop_toBottomOf="@id/tr_music_1"
         android:id="@+id/tr_music_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.09"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp">
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tr_music_1">
 
         <ImageView
             android:layout_width="0dp"
-            android:maxWidth="45dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:maxWidth="45dp"
             android:src="@mipmap/music"
             tools:ignore="ContentDescription" />
+
         <LinearLayout
-            android:layout_weight="6"
             android:layout_width="0dp"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="20dp"
+            android:layout_weight="6"
             android:orientation="vertical">
 
             <TextView
@@ -137,9 +139,9 @@
 
         <Switch
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
+            android:layout_weight="1"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
     </TableRow>
 </androidx.constraintlayout.widget.ConstraintLayout>

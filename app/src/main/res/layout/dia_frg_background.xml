@@ -28,53 +28,53 @@
 
             />
 
-        <RadioButton
-            android:id="@+id/rb_trans"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:text="@string/transparent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
             app:layout_constraintStart_toStartOf="@id/tv_1"
             app:layout_constraintTop_toBottomOf="@id/tv_1"
-            tools:ignore="RtlSymmetry" />
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_trans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="@string/transparent"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry" />
 
-        <RadioButton
-            android:id="@+id/rb_curr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:text="@string/current_wall"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/rb_trans"
-            app:layout_constraintTop_toBottomOf="@id/rb_trans"
-            tools:ignore="RtlSymmetry" />
+            <RadioButton
+                android:id="@+id/rb_curr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="@string/current_wall"
+                android:textColor="@color/black"
+                android:textSize="20sp"
 
-        <RadioButton
-            android:id="@+id/rb_defaul"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:text="@string/defaul"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/rb_curr"
-            app:layout_constraintTop_toBottomOf="@id/rb_curr"
-            tools:ignore="RtlSymmetry" />
+                tools:ignore="RtlSymmetry" />
 
-        <RadioButton
-            android:id="@+id/rb_screen_blur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:text="@string/screen_blur"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/rb_defaul"
-            app:layout_constraintTop_toBottomOf="@id/rb_defaul"
-            tools:ignore="RtlSymmetry" />
+            <RadioButton
+                android:id="@+id/rb_defaul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="@string/defaul"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry" />
+
+            <RadioButton
+                android:id="@+id/rb_screen_blur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="@string/screen_blur"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry" />
+        </RadioGroup>
 
         <TextView
             android:id="@+id/tv_cancel"
@@ -85,6 +85,6 @@
             android:textColor="@color/pink"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rb_screen_blur" />
+            app:layout_constraintTop_toBottomOf="@id/radio_group" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

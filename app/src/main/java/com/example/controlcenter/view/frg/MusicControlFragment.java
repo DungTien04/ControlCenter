@@ -1,6 +1,7 @@
 package com.example.controlcenter.view.frg;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,11 @@ public class MusicControlFragment extends BaseFragment<FrgMusicControlBinding, M
     @Override
     protected void initViews() {
         binding.ivBack.setOnClickListener(v ->  back());
+        binding.trMusic1.setOnClickListener(v -> chooseMusicPlayer());
+    }
+
+    private void chooseMusicPlayer() {
+        callBack.showFragment(MusicPlayerFragment.TAG,null,true);
     }
 
     private void back() {

@@ -11,12 +11,12 @@ import com.example.controlcenter.databinding.FrgCusControlsBinding;
 import com.example.controlcenter.model.Apps;
 import com.example.controlcenter.view.adapter.App2Adapter;
 import com.example.controlcenter.view.adapter.AppAdapter;
-import com.example.controlcenter.viewMd.M001MD;
+import com.example.controlcenter.viewMd.CustomControlMD;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding, M001MD>{
+public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding, CustomControlMD>{
     public static final String TAG =CustomizeControlFragment.class.getName() ;
     private  List<Apps> listApp=new ArrayList<>();
     private  List<Apps> listUse=new ArrayList<>();
@@ -24,8 +24,8 @@ public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding
     private App2Adapter adapter2;
 
      @Override
-    protected Class<M001MD> getClassVM() {
-        return M001MD.class;
+    protected Class<CustomControlMD> getClassVM() {
+        return CustomControlMD.class;
     }
 
     @Override
@@ -41,8 +41,8 @@ public class CustomizeControlFragment extends BaseFragment<FrgCusControlsBinding
     }
 
     private void loadData() {
-        listApp=App.getInstance().getControlDB().getDao().getNonUseApp();
-        listUse=App.getInstance().getControlDB().getDao().getUseApp();
+        listApp=App.getInstance().getControlDB().getDao().getUseApp();
+        listUse=App.getInstance().getControlDB().getDao().getNonUseApp();
     }
     private void showListApps() {
 
